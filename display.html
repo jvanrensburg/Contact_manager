@@ -1,0 +1,48 @@
+<html>
+    <header>
+            <link href = "style.css" rel = "stylesheet"/>
+            <nav>
+                    <ul>
+                            <h1>Contact information</h1><br><br>
+                    </ul>
+                </nav>
+    </header>
+    <br><br><br>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyAIpNyHP5MK435budNLeVrgg4qpKrNLA2U",
+        authDomain: "jvrdt-70e4e.firebaseapp.com",
+        databaseURL: "https://jvrdt-70e4e.firebaseio.com",
+        projectId: "jvrdt-70e4e",
+        storageBucket: "",
+        messagingSenderId: "561249941742"
+        };
+        firebase.initializeApp(config);
+    
+    </script>
+    <div class="panel-body">
+        <form>
+            <br>
+            <button id="btnRead" type="button" onclick="read_data()">Read Data</button>
+        </form>
+        <br>
+        <table class="table table-striped" border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Email</th>
+                    <th>Number</th>
+                </tr>
+            </thead>
+            <tbody id="lstTable"></tbody>
+        </table>
+    </div>
+    <br><br>
+    <button onclick="location.href = 'index.html';" id="return_home">Return</button>
+    <script src="app.js" type="application/javascript"></script>
+</html>

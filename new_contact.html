@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+    <header>
+            <link href = "style.css" rel = "stylesheet"/>
+            <nav>
+                    <ul>
+                            <h1>Contact information</h1><br><br>
+                    </ul>
+                </nav>
+    </header>
+            
+<body>
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyAIpNyHP5MK435budNLeVrgg4qpKrNLA2U",
+        authDomain: "jvrdt-70e4e.firebaseapp.com",
+        databaseURL: "https://jvrdt-70e4e.firebaseio.com",
+        projectId: "jvrdt-70e4e",
+        storageBucket: "",
+        messagingSenderId: "561249941742"
+        };
+        firebase.initializeApp(config);
+    
+    </script>
+    <br><br><br>
+    <p id="demo">Create new contact</p>
+    <br>
+    <input type="text" id="f_name" placeholder="First name"><br>
+    <input type="text" id="l_name" placeholder="Last name"><br>
+    <input type="text" id="email" placeholder="Email"><br>
+    <input type="text" id="m_number" placeholder="Moblie number"><br><br>
+    <button type="submit" onclick="submit_new()" id="submit_new_btn">Submit</button>
+    <br><br>
+    <button onclick="location.href = 'index.html';" id="return_home">Return</button>
+    <script src="app.js" type="application/javascript"></script>
+
+</body>
+
+</html>
