@@ -84,35 +84,7 @@ function read_data()
         }
     );
 }
-/*
 
-function edit_user()
-{
-    var f_Names = document.getElementById("f_name").value;
-    var l_Names = document.getElementById("l_name").value;
-    var emails = document.getElementById("email").value;
-    var m_num = document.getElementById("m_number").value;
-
-    var demails = document.getElementById("demail").value;
-    var firebaseRefdel = firebase.database().ref().child("users").child(demails);
-
-    var postData = {
-        First_name: f_Names,
-        Last_name: l_Names,
-        email: emails,
-        Mobile_number: m_num
-    };
-
-    // Get a key for a new Post.
-    var newPostKey = firebase.database().ref().child('users').push().key;
-
-    // Write the new post's data simultaneously in the posts list and the user's post list.
-    var updates = {};
-    updates[newPostKey] = postData;
-
-    window.alert("Contact information changed");
-}
-*/
 
 function writeNewPost() 
 {
@@ -122,7 +94,7 @@ function writeNewPost()
     var m_num = document.getElementById("m_number").value;
 
     var demails = document.getElementById("demail").value;
-    var firebaseRefdel = firebase.database().ref().child("users/").child(demails);
+    var firebaseRefdel = firebase.database().ref().child("users").child(demails);
 
     // A post entry.
     var postData = {
@@ -133,14 +105,14 @@ function writeNewPost()
     };
   
     // Get a key for a new Post.
-    var newPostKey = firebase.database().ref().child('posts').push().key;
+    var newPostKey = firebase.database().ref().child('users').push().key;
   
     // Write the new post's data simultaneously in the posts list and the user's post list.
     var updates = {};
-    updates['/posts/' + newPostKey] = postData;
-    updates['/user-posts/' + uid + '/' + newPostKey] = postData;
+    updates[m_num + '_' + l_Names] = postData;
+   //dates['/user-posts/' + uid + '/' + newPostKey] = postData;
   
-    firebase.database().ref().update(postData);
+   firebaseRefdel.update(updates);
     window.alert("Contact information changed");
 
 }

@@ -82,8 +82,8 @@ nav ul li p{
 button[type=submit]{
 	margin-left:20px;
 	padding-left: 10px;
-	background-color: rgb(255, 253, 253);
-	color: rgb(0, 0, 0);
+	background-color: rgb(0, 0, 0);
+	color: #3f77b8f5;
     width:100px;
     height:30px;
 }
@@ -91,8 +91,39 @@ button[type=submit]{
 button[id="return_home"]{
 	margin-left:800px;
 	padding-left: 10px;
-	background-color: rgb(255, 253, 253);
-	color: rgb(0, 0, 0);
+	background-color: rgb(0, 0, 0);
+	color: #3f77b8f5;
     width:100px;
     height:30px;
+}
+
+button[id="btnRead"]{
+	margin-left:50px;
+	padding-left: 10px;
+	background-color: rgb(0, 0, 0);
+	color: #3f77b8f5;
+    width:100px;
+    height:30px;
+}
+
+table {
+	width: 100%;
+	border: 1px #3f77b8f5;
+	padding: 15px;
+	background-color: black;
+	color: #3f77b8f5;
+	text-align: left;
+}
+
+th {
+	height: 50px;
+	border: 1px #3f77b8f5;
+	padding: 15px;
+	color: #3f77b8f5;
+	text-align: left;
+}
+td{
+	padding: 15px;
+	color: #3f77b8f5;
+	text-align: left;
 }
